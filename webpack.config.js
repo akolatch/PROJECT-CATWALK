@@ -18,18 +18,17 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: [
-            '@babel/preset-env',
-            '@babel/preset-react'
-          ],
-          plugins: [
-            '@babel/transform-runtime'
-          ]
-        }
+          presets: ['@babel/preset-env', '@babel/preset-react'],
+          plugins: ['@babel/transform-runtime'],
+        },
       },
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.js$/,
@@ -45,7 +44,7 @@ module.exports = {
     // fix "process is not defined" error:
     // (do "npm install process" before running the build)
     new webpack.DefinePlugin({
-      'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
-    })
-  ]
+      'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
+    }),
+  ],
 };

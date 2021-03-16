@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ThumbCard from './ThumbCard.jsx';
-import ArrowButton from './UpDownButton.jsx';
+import ArrowButton from './ScrollButton.jsx';
 
 const ThumbGallery = ({ thumbGallery, selectImage, currentImageIndex }) => {
   let cardContainer = null;
@@ -18,9 +18,12 @@ const ThumbGallery = ({ thumbGallery, selectImage, currentImageIndex }) => {
       {thumbGallery.length > 6 ? (
         <div className='thumb-gallery'>
           <ArrowButton
+            classList='up-down-btn'
             direction={-1}
-            disabledIndex={imageIndex === 0}
+            disabled={imageIndex === 0}
+            path='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'
             scroll={scroll}
+            size={16}
           />
           <div className='gallery-port'>
             <div
@@ -38,10 +41,12 @@ const ThumbGallery = ({ thumbGallery, selectImage, currentImageIndex }) => {
             </div>
           </div>
           <ArrowButton
+            classList='up-down-btn'
             direction={1}
             disabled={imageIndex === thumbGallery.length - 6}
+            path='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'
             scroll={scroll}
-            up={false}
+            size={16}
           />
         </div>
       ) : (
