@@ -39,6 +39,7 @@ const InStock = ({
   return (
     <form action=''>
       <select
+        aria-label='size selector'
         name='size'
         className='checkout-form-item size-select'
         onChange={sizeChange}
@@ -56,15 +57,21 @@ const InStock = ({
       </select>
       {currentSku === '' ? (
         <select
+          aria-label='quantity selector'
           className='quantity checkout-form-item'
           disabled
           name='quantity'
-          id=''
+          // id=''
         >
           <option value=''>-</option>
         </select>
       ) : (
-        <select className='quantity checkout-form-item' name='quantity' id=''>
+        <select
+          aria-label='quantity selector'
+          className='quantity checkout-form-item'
+          name='quantity'
+          // id=''
+        >
           {quantities.map((amount) => (
             <option key={amount} value={amount}>
               {amount}

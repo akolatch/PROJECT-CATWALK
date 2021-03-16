@@ -11,9 +11,11 @@ const ProductInfo = ({
     <div className='rating-container'>
       <StarRating productAvgStarRating={productAvgStarRating} />
       <Scrollspy items={['rContainer']}>
-        <a href='#rContainer' className='answerBody to-review'>
-          Read all reviews
-        </a>
+        <li style={{ listStyleType: 'none' }}>
+          <a href='#rContainer' className='answerBody to-review'>
+            Read all reviews
+          </a>
+        </li>
       </Scrollspy>
     </div>
     <div className='category answerBody'>
