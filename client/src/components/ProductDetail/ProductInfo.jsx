@@ -1,6 +1,6 @@
 import React from 'react';
-import StarRating from '../RatingsReviews/ProductRatings/StarRatingReadOnly';
 import Scrollspy from 'react-scrollspy';
+import StarRating from '../RatingsReviews/ProductRatings/StarRatingReadOnly';
 
 const ProductInfo = ({
   currentProduct,
@@ -12,7 +12,7 @@ const ProductInfo = ({
       <StarRating productAvgStarRating={productAvgStarRating} />
       <Scrollspy items={['rContainer']}>
         <li style={{ listStyleType: 'none' }}>
-          <a href='#rContainer' className='answerBody to-review'>
+          <a className='answerBody to-review' href='#rContainer'>
             Read all reviews
           </a>
         </li>

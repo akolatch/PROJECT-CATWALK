@@ -1,15 +1,15 @@
 import React from 'react';
-const ThumbCard = ({ selectImage, index, photo }) => (
+const ThumbCard = ({ index, photo, selectImage }) => (
   <button
     aria-label={index}
+    className='thumbnail thumb-square'
     onClick={(e) => {
       selectImage(e.target.value, index);
     }}
-    value={photo.url}
-    className='thumbnail thumb-square'
     style={{
       backgroundImage: `url(${photo.thumbnail_url})`,
     }}
+    value={photo.url}
   ></button>
 );
 

@@ -1,12 +1,13 @@
 import React from 'react';
-import SocialMediaTag from './SocialMediaTag.jsx';
-import OutOfStock from './OutStock.jsx';
+
 import InStock from '../../containers/productDetails/InStockContainer.js';
+import OutOfStock from './OutStock.jsx';
+import SocialMediaTag from './SocialMediaTag.jsx';
 
 const AddToCart = ({
-  currentStyle,
   addToOutfitList,
   currentProduct,
+  currentStyle,
   outfitList,
 }) => {
   const favorite = (e) => {

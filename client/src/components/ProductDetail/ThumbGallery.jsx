@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ThumbCard from './ThumbCard.jsx';
 import ArrowButton from './ScrollButton.jsx';
 
-const ThumbGallery = ({ thumbGallery, selectImage, currentImageIndex }) => {
+const ThumbGallery = ({ currentImageIndex, selectImage, thumbGallery }) => {
   let cardContainer = null;
   const [imageIndex, setImageIndex] = useState(currentImageIndex);
 
@@ -15,8 +15,8 @@ const ThumbGallery = ({ thumbGallery, selectImage, currentImageIndex }) => {
 
   return (
     <div>
-      {thumbGallery.length > 6 ? (
-        <div className='thumb-gallery'>
+      <div className='thumb-gallery'>
+        {thumbGallery.length > 6 ? (
           <ArrowButton
             classList='up-down-btn'
             direction={-1}
@@ -26,21 +26,23 @@ const ThumbGallery = ({ thumbGallery, selectImage, currentImageIndex }) => {
             scroll={scroll}
             size={16}
           />
-          <div className='gallery-port'>
-            <div
-              ref={(element) => (cardContainer = element)}
-              className='gallery-card'
-            >
-              {thumbGallery.map((pic, i) => (
-                <ThumbCard
-                  selectImage={selectImage}
-                  index={i}
-                  key={`${i} ${pic.url.slice(34)}`}
-                  photo={pic}
-                />
-              ))}
-            </div>
+        ) : null}
+        <div className='gallery-port'>
+          <div
+            className='gallery-card'
+            ref={(element) => (cardContainer = element)}
+          >
+            {thumbGallery.map((pic, i) => (
+              <ThumbCard
+                index={i}
+                key={`${i} ${pic.url.slice(34)}`}
+                photo={pic}
+                selectImage={selectImage}
+              />
+            ))}
           </div>
+        </div>
+        {thumbGallery.length > 6 ? (
           <ArrowButton
             classList='up-down-btn'
             direction={1}
@@ -50,19 +52,8 @@ const ThumbGallery = ({ thumbGallery, selectImage, currentImageIndex }) => {
             scroll={scroll}
             size={16}
           />
-        </div>
-      ) : (
-        <div className='thumb-gallery'>
-          {thumbGallery.map((pic, i) => (
-            <ThumbCard
-              selectImage={selectImage}
-              index={i}
-              key={`${i} ${pic.url.slice(34)}`}
-              photo={pic}
-            />
-          ))}
-        </div>
-      )}
+        ) : null}
+      </div>
     </div>
   );
 };

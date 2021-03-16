@@ -1,9 +1,9 @@
 import React from 'react';
-import ProductInfo from '../../containers/productDetails/ProductInfoContainer.js';
-import StyleSelector from '../../containers/productDetails/StyleSelectorContainer.js';
 import AddToCart from '../../containers/productDetails/AddToCartContainer.js';
 import ImageGallery from '../../containers/productDetails/ImageGalleryContainer.js';
+import ProductInfo from '../../containers/productDetails/ProductInfoContainer.js';
 import ProductOverview from '../../containers/productDetails/productOverviewContainer.js';
+import StyleSelector from '../../containers/productDetails/StyleSelectorContainer.js';
 
 const ProductDetailMain = () => (
   <div className='product-display-container'>

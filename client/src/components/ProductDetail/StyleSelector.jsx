@@ -1,20 +1,20 @@
 import React from 'react';
 
-const StyleSelector = ({ currentStyleList, currentStyle, styleChange }) => (
+const StyleSelector = ({ currentStyle, currentStyleList, styleChange }) => (
   <div className='style-selector'>
     <div className='style-name answerBody'>
       <b className='questionBody'>STYLE &gt;</b> {currentStyle.name}
     </div>
-    {currentStyleList.map((style, i) => (
+    {currentStyleList.map((style) => (
       <button
         aria-label={style.name}
-        onClick={styleChange}
         className='thumbnail thumb-round'
         key={style.style_id}
-        value={JSON.stringify(style)}
+        onClick={styleChange}
         style={{
           backgroundImage: `url(${style.photos[0].thumbnail_url})`,
         }}
+        value={JSON.stringify(style)}
       >
         <svg
           width='16'

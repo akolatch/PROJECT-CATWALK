@@ -13,10 +13,10 @@ const App = () => {
       <div id='pdcontainer'>
         <ProductDetailMain />
       </div>
-      {/* <>
+      <>
         <RelatedItemsContainer />
       </>
-      <div id="container">
+      {/* <div id="container">
         <QAModuleContainer/>
       </div>
       <div id='rContainer'>

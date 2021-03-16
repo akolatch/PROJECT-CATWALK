@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import InnerImageZoom from 'react-inner-image-zoom';
-import ThumbGallery from '../../containers/productDetails/ThumbGalleryContainer.js';
-import { Modal } from '@material-ui/core';
 import Fade from '@material-ui/core/Fade';
-import ViewButton from './ViewButton.jsx';
+import { Modal } from '@material-ui/core';
 import ScrollButton from './ScrollButton.jsx';
+import ThumbGallery from '../../containers/productDetails/ThumbGalleryContainer.js';
+import ViewButton from './ViewButton.jsx';
 
 const ImageGallery = ({
   currentImage,
-  thumbGallery,
-  selectImage,
   currentImageIndex,
+  selectImage,
+  thumbGallery,
 }) => {
   const [Open, setOpen] = useState(false);
 
