@@ -7,6 +7,7 @@ const StyleSelector = ({ currentStyleList, currentStyle, styleChange }) => (
     </div>
     {currentStyleList.map((style, i) => (
       <button
+        aria-label={style.name}
         onClick={styleChange}
         className='thumbnail thumb-round'
         key={style.style_id}

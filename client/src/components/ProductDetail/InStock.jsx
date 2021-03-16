@@ -79,7 +79,11 @@ const InStock = ({
         value='ADD TO BAG                    +'
         onClick={submitToCart}
       />
-      <button className='checkout-form-item' onClick={favorite}>
+      <button
+        aria-label='add favorite'
+        className='checkout-form-item'
+        onClick={favorite}
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='16'

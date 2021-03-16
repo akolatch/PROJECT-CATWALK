@@ -9,11 +9,11 @@ import Header from '../components/Header/Header.jsx';
 const App = () => {
   return (
     <div>
-      <Header/>
+      <Header />
       <div id='pdcontainer'>
         <ProductDetailMain />
       </div>
-      <>
+      {/* <>
         <RelatedItemsContainer />
       </>
       <div id="container">
@@ -21,7 +21,7 @@ const App = () => {
       </div>
       <div id='rContainer'>
         <RatingsReviewsMain />
-      </div>
+      </div> */}
     </div>
   );
 };

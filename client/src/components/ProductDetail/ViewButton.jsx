@@ -1,7 +1,11 @@
 import React from 'react';
 
 const ViewButton = ({ classList, handleClick }) => (
-  <button className={classList} onClick={handleClick}>
+  <button
+    aria-label='expanded view'
+    className={classList}
+    onClick={handleClick}
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width='12'

@@ -4,11 +4,13 @@ const ScrollButton = ({
   classList,
   direction,
   disabled,
+  label,
   path,
   scroll,
   size,
 }) => (
   <button
+    aria-label={`scroll ${label}`}
     disabled={disabled}
     className={classList}
     onClick={() => {
