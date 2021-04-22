@@ -7,8 +7,7 @@ import changeStyleList from './currentStyleList.js';
 import setReviewsList from '../RatingsReviews/setReviewsList.js';
 import { setRatings } from '../RatingsReviews/setRatings.js';
 import changeQuestionList from '../QA/questionList.js';
-import getRelatedItemIds from '../relatedItems/getRelatedItemIds.js';
-// import addRelatedItems from '../relatedItems/addRelatedItems.js';
+import addRelatedItems from '../relatedItems/addRelatedItems.js';
 
 const setSelectedProduct = (product_id) => {
   return (dispatch) => {
@@ -20,7 +19,6 @@ const setSelectedProduct = (product_id) => {
         dispatch(setReviewsList(product_id));
         dispatch(setRatings(product_id));
         dispatch(getRelatedItemIds(product_id));
-        // dispatch( addRelatedItems( product_id ) );
       })
       .then(() => {
         return searchAPI.get(`products/${product_id}/styles`);
