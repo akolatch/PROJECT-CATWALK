@@ -1,4 +1,4 @@
-# Front End Capstone
+# PROJECT CATWALK
 > Table of Contents
 
 - [Introduction](#Introduction)
